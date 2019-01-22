@@ -449,18 +449,26 @@ function lockResult() {
 
 function getValue () {
 
+  // USER INPUTS
+
   var name = document.querySelector('#name').value;
   var pref = document.querySelector('#pref').value;
   var cost = document.querySelector('#cost').value;
+
+  // FILTERS ARRAY BY COST
 
   let cuisineArray = cuisineObj[pref];
   let filteredArray = cuisineArray.filter(restObj => {
     return restObj.cost.length <= cost.length;
   });
 
+  // GUARDS AGAINST NO OPTIONS
+
   if (filteredArray.length === 0) {
     alert("Sorry, nothing in your price range.");
   }
+
+  // SELECTS RANDOM RESTAURANT IN FILTERED ARRAY
 
   let arrayIndex = finalResult(filteredArray);
   let restaurant = filteredArray[arrayIndex]['name'];
@@ -473,8 +481,12 @@ function getValue () {
 
   }
 
+  // OUTPUTS DATA TO HTML
+
   var total = document.querySelector('#result');
   total.innerText = restaurant;
+
+  // TESTING LOGS
 
   console.log("User --> ", name);
   console.log("Choice --> ",pref);
