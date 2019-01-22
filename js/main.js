@@ -439,7 +439,7 @@ function lockResult() {
   let counter = 0
     function generateRandomNum(array) {
       counter++
-      if (counter <= 2) return Math.floor(Math.random() * array.length);
+      if (counter < 2) return Math.floor(Math.random() * array.length);
       else alert('final decision!!');
     }
     return generateRandomNum;
