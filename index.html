@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurant Roulette</title>
+  <link href="css/index.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Pacifico" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+      <header>
+        <h1>Restaurant Roulette</h1>
+      </header>
+      <section class="intro">
+        <h2>These are the rules:</h2>
+        <ol>
+          <li>Follow the rules.</li>
+          <li>Answer the questions.</li>
+          <li>You get three chances.</li>
+          <li>Enjoy the company of who you're with.</li>
+          <li>Order dessert.</li>
+        </ol>
+      </section>
+
+      <form method="get" action="#">
+
+        <div class="name">
+          <label for="name"></label>
+          <input type="text" name="name" id="name" placeholder=" Name" autofocus required/>
+        </div>
+
+        <section class="choices">
+
+          <div class="preference">
+            <p>What're you feelin'?</p>
+            <select name="pref-cuisine" id="pref" required>
+              <option value="nada">I AIN'T CARE.</option>
+              <option value="bq">Barbecue</option>
+              <option value="br">Brazilian</option>
+              <option value="ca">Cajun</option>
+              <option value="ch">Chinese</option>
+              <option value="fr">French</option>
+              <option value="me">Mediterranean</option>
+              <option value="in">Indian</option>
+              <option value="it">Italian</option>
+              <option value="ja">Japanese</option>
+              <option value="ko">Korean</option>
+              <option value="mx">Mexican</option>
+              <option value="na">New American</option>
+              <option value="si">Singaporean</option>
+              <option value="th">Thai</option>
+              <option value="ve">Vegan</option>
+              <option value="vi">Vietnamese</option>
+            </select>
+          </div>
+
+          <div class="cost-options">
+            <p>How broke are you?</p>
+            <select name="cost-list" id="cost">
+              <option value="$$$">BALLER! ($$$)</option>
+              <option value="$$">Meh. ($$)</option>
+              <option value="$">broke AF.($)</option>
+            </select>
+          </div>
+
+        </section>
+
+        <section class="returned-result">
+          <p id="result"></p>
+          <button type="button" onclick="getValue();">Submit</button>
+        </section>
+
+      </form>
+
+
+      <footer>
+        <img src='../gryffindor/img/crest.png' alt="Gryffindor crest."></img>
+      </footer>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

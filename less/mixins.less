@@ -1,0 +1,40 @@
+.t() {
+  border: 1px solid red;
+}
+
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexcol() {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.wide-center() {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.custom-btns(@width: 200px, @height: 60px) {
+	width: @width;
+	height: @height;
+	color: white;
+	background-color: @main-bg;
+	border: 1px solid @main-bg;
+	border-radius: 5px;
+	font-size: 1.8rem;
+	font-weight: 400;
+	.center;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: @white;
+		color: @main-bg;
+		border: 3px solid @main-bg;
+  }
+}
